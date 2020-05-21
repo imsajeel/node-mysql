@@ -11,4 +11,6 @@ app.get("/", (req, res) => {
 });
 app.use("/peoples", PeopleRoutes);
 
-app.listen(3000);
+let port = process.env.PORT;
+
+app.listen(port || 3000);
