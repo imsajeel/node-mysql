@@ -5,6 +5,8 @@ Router.get("/", (req, res) => {
   res.send(
     `
     <h1>Welcome to home</h1>
+    <a href="/salesforce">/salesforce</a>
+    <br/>
     <a href="/peoples">/peoples</a>
     <br/>
     <a href="/adduser">/adduser</a>
