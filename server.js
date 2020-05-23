@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const home = require("./routes/home");
 const salesforceRoutes = require("./routes/salesforce");
 const PeopleRoutes = require("./routes/peoples");
-const addUser = require("./routes/adduser");
+const add = require("./routes/add");
 
 const app = express();
 app.use(bodyParser.json());
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.get("/", home);
 app.use("/peoples", PeopleRoutes);
 app.use("/salesforce", salesforceRoutes);
-app.use("/adduser", addUser);
+app.use("/add", add);
 
 app.get("/todos/:id", function (req, res, next) {
   console.log("Request Id:", req.params.id);
